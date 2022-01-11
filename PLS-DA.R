@@ -10,7 +10,7 @@ FactorClasses <- as.factor(classes)
 Key2 <- data.matrix(Key, rownames.force = classes)
 #Create unique rows for indetity
 rownames(Key2) <- make.unique(classes)
-DataPlsda <- plsda(Key2, FactorClasses, ncomp = 2)  # set ncomp to 10 for performance assessment later
+DataPlsda <- plsda(Key2, FactorClasses, ncomp = 2)
 plotIndiv(DataPlsda , comp = 1:2,
           group = FactorClasses, ind.names = FALSE, 
           ellipse = TRUE, legend = TRUE, title = 'PLSDA on Spectrescopy')
